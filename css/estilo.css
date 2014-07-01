@@ -50,3 +50,10 @@ input[type=submit]:hover, input[type=button]:hover, a:hover{
 input[type=checkbox]{
     margin:0px 4px;
 }
+//Cosas para el JS
+#tblCantidadIngresadaEmpresas{
+    display: none;
+}
+#tblHorasMensuales{
+    display: none;
+}
