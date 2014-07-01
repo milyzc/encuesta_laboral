@@ -5,6 +5,7 @@
         </title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <link href="<?php echo $global_web_css; ?>/estilo.css" rel="stylesheet" type="text/css" />
+        <script src="<?php echo $global_web_js; ?>/lib/jquery-1.9.1.min.js" type="text/javascript"></script>
         <script src="<?php echo $global_web_js; ?>/estilo.js" type="text/javascript"></script>
     </head>
     <body>
@@ -12,7 +13,7 @@
             <h1 id="tituloEncuesta">
                 Encuesta sobre costo de Rúbrica de documentación laboral en presentación papel (libro de hojas móviles)
             </h1>
-            <table class="pregunta">
+            <table class="pregunta" id="tblCantidadEmpresas">
                 <tr>
                     <td>
                         <p>1. ¿De cuántas empresas administra la documentación laboral (puede incluír la propia)?</p>
@@ -20,26 +21,26 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="1" name="optCuantasEmpresas" />
+                        <input type="radio" value="1" name="optCantidadEmpresas" />
                         <label>a) 1</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="mas" name="optCuantasEmpresas" />
+                        <input type="radio" value="+1" name="optCantidadEmpresas" />
                         <label>b) Más de 1</label>
                     </td>
                 </tr>
             </table>
-            <table class="pregunta" id="tblCantidadEmpresas">
+            <table class="pregunta" id="tblCantidadIngresadaEmpresas">
                 <tr>
                     <td>
                         1.I. ¿Cuántas empresas administra?
-                        <input type="text" value="" name="txtCuantasEmpresas" />
+                        <input type="text" value="" name="txtCantidadIngresadaEmpresas" />
                     </td>
                 </tr>
             </table>
-            <table class="pregunta">
+            <table class="pregunta" id="tblEmpleadosPorEmpresa">
                 <tr>
                     <td>
                         <p>2. Detalle cuántos empleados tiene aproximadamente cada empresa completando el siguiente cuadro:</p>
@@ -152,7 +153,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta">
+            <table class="pregunta" id="tblCantidadEmpleadosDedicados">
                 <tr>
                     <td>
                         <p>3. ¿Cuántos empleados de su empresa se dedican a la administración de documentación laboral?</p>
@@ -160,7 +161,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="1" name="optCantidadEmpleadosDedicados" />
+                        <input type="radio" value="parcial" name="optCantidadEmpleadosDedicados" />
                         <label>a) 1 empleado con dedicación parcial</label>
                     </td>
                 </tr>
@@ -172,7 +173,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="1+" name="optCantidadEmpleadosDedicados" />
+                        <input type="radio" value="+1" name="optCantidadEmpleadosDedicados" />
                         <label>c) Más de 1 empleado con dedicación full time</label>
                     </td>
                 </tr>
@@ -193,7 +194,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta">
+            <table class="pregunta" id="tblCantidadVecesViaja">
                 <tr>
                     <td>
                         <p>4. Por cada presentación, ¿Cuántas veces debe dirigirse a la Secretaría de Trabajo?</p>
@@ -201,32 +202,32 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="2" name="optCantidadVecesSecretaria" />
+                        <input type="radio" value="2" name="optCantidadVecesViaja" />
                         <label>a) 2 veces (una vez para presentar, otra vez para retirar)</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="3" name="optCantidadVecesSecretaria" />
+                        <input type="radio" value="3" name="optCantidadVecesViaja" />
                         <label>b) 3 veces</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="+3" name="optCantidadVecesSecretaria" />
+                        <input type="radio" value="+3" name="optCantidadVecesViaja" />
                         <label>c) Más de 3 veces</label>
                     </td>
                 </tr>
             </table>
-            <table class="pregunta" id="tblCantidadIngresadaVeces">
+            <table class="pregunta" id="tblCantidadIngresadaVecesViaja">
                 <tr>
                     <td>
                         4.I. ¿Cuántas veces?
-                        <input type="text" value="" name="txtCantidadIngresadaVeces" />
+                        <input type="text" value="" name="txtCantidadIngresadaVecesViaja" />
                     </td>
                 </tr>
             </table>
-            <table class="pregunta">
+            <table class="pregunta" id="tblPorCadaViaje">
                 <tr>
                     <td>
                         <p>5. Por cada vez que se dirige a la Secretaría de Trabajo:</p>
@@ -258,7 +259,7 @@
                     Teniendo en cuenta que se deben realizar durante el año 3 presentaciones de los libros de hojas móviles por empresa, se requiere conocer el costo estimado en insumos de librería para esta tarea:
                 </p>
             </div>
-            <table class="pregunta" >
+            <table class="pregunta" id="tblTipoImpresora">
                 <tr>
                     <td>
                         <p>6. ¿Qué tipo de impresora utiliza? </p>
@@ -293,7 +294,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta" >
+            <table class="pregunta" id="tblUsoImpresora">
                 <tr>
                     <td>
                         <p>7. ¿Utiliza la impresora exclusivamente para imprimir documentación laboral? </p>
@@ -320,7 +321,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta">
+            <table class="pregunta" id="tblOpcionCantidadResmas">
                 <tr>
                     <td>
                         <p>8. ¿Cuántas resmas de papel imprime por cada presentación?</p>
@@ -361,7 +362,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta">
+            <table class="pregunta" id="tblUsaFotocopias">
                 <tr>
                     <td>
                         <p>9. ¿Utiliza fotocopias en cada presentación? Por ejemplo de la última hoja foliada.</p>
@@ -386,7 +387,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta">
+            <table class="pregunta" id="tblCantidadCarpetas">
                 <tr>
                     <td>
                         <p>10. ¿Cuántas carpetas utiliza por cada presentación?</p>
@@ -408,7 +409,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta" id="tblCantidadCarpetas">
+            <table class="pregunta" id="tblCantidadIngresadaCarpetas">
                 <tr>
                     <td>
                         10.I. ¿Cuántas carpetas utiliza?
@@ -416,7 +417,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta">
+            <table class="pregunta" id="tblCantidadNepacos">
                 <tr>
                     <td>
                         <p>11 ¿Cuántas nepacos utiliza por cada presentación?</p>
@@ -438,7 +439,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta" id="tblCantidadNepacos">
+            <table class="pregunta" id="tblCantidadIngresadaNepacos">
                 <tr>
                     <td>
                         11.I. ¿Cuántas nepacos utiliza?
@@ -446,7 +447,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta">
+            <table class="pregunta" id="tblCantidadCaratulas">
                 <tr>
                     <td>
                         <p>12. ¿Cuántas carátulas utiliza por cada presentación?</p>
@@ -468,7 +469,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta" id="tblCantidadCaratulas">
+            <table class="pregunta" id="tblCantidadIngresadaCaratulas">
                 <tr>
                     <td>
                         12.I. ¿Cuántas carátulas utiliza?
@@ -476,7 +477,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta" >
+            <table class="pregunta" id="tblCantidadReimpresion" >
                 <tr>
                     <td>
                         <p>13. ¿Cuántas veces se tuvo que reimprimir un libro por error de foliado o errores de forma previo a su presentación?</p>
@@ -486,7 +487,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="pregunta" >
+            <table class="pregunta" id="tblCostoArchivado">
                 <tr>
                     <td>
                         <p>14. Costo estimado del archivado por 10 años de los libros rubricados</p>
