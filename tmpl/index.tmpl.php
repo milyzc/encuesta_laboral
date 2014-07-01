@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <link href="<?php echo $global_web_css; ?>/estilo.css" rel="stylesheet" type="text/css" />
         <script src="<?php echo $global_web_js; ?>/lib/jquery-1.9.1.min.js" type="text/javascript"></script>
-        <script src="<?php echo $global_web_js; ?>/estilo.js" type="text/javascript"></script>
+        <script src="<?php echo $global_web_js; ?>/encuesta_laboral.js" type="text/javascript"></script>
     </head>
     <body>
         <form id="contenedor" method="post" action="<?php echo $global_web; ?>/index.php">
@@ -370,12 +370,12 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="si" name="optUsaFotocopias" id="optUsaFotocopiasSi" /><label>a) Sí</label>
+                        <input type="radio" value="si" name="optUsaFotocopiaPresentacion" id="optUsaFotocopiasSi" /><label>a) Sí</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="no" name="optUsaFotocopias" id="optUsaFotocopiasNo" /><label>b) No</label>
+                        <input type="radio" value="no" name="optUsaFotocopiaPresentacion" id="optUsaFotocopiasNo" /><label>b) No</label>
                     </td>
                 </tr>
             </table>
@@ -413,7 +413,7 @@
                 <tr>
                     <td>
                         10.I. ¿Cuántas carpetas utiliza?
-                        <input type="text" value="" name="txtCantidadCarpetas" id="txtCantidadCarpetas" />
+                        <input type="text" value="" name="txtCantidadIngresadaCarpetas" id="txtCantidadIngresadaCarpetas" />
                     </td>
                 </tr>
             </table>
@@ -443,7 +443,7 @@
                 <tr>
                     <td>
                         11.I. ¿Cuántas nepacos utiliza?
-                        <input type="text" value="" name="txtCantidadNepacos" id="txtCantidadNepacos" />
+                        <input type="text" value="" name="txtCantidadIngresadaNepacos" id="txtCantidadNepacos" />
                     </td>
                 </tr>
             </table>
@@ -460,12 +460,12 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="4" name="optCantidadNepacos" id="optCantidadNepacos4" /><label>b) 4</label>
+                        <input type="radio" value="4" name="optCantidadCaratulas" id="optCantidadNepacos4" /><label>b) 4</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="+4" name="optCantidadNepacos" id="optCantidadNepacosMasDe4" /><label>c) Más de 4</label>
+                        <input type="radio" value="+4" name="optCantidadCaratulas" id="optCantidadNepacosMasDe4" /><label>c) Más de 4</label>
                     </td>
                 </tr>
             </table>
@@ -473,7 +473,7 @@
                 <tr>
                     <td>
                         12.I. ¿Cuántas carátulas utiliza?
-                        <input type="text" value="" name="txtCantidadCaratulas" id="txtCantidadCaratulas" />
+                        <input type="text" value="" name="txtCantidadIngresadaCaratulas" id="txtCantidadCaratulas" />
                     </td>
                 </tr>
             </table>
