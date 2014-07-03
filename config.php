@@ -34,6 +34,6 @@ date_default_timezone_set('America/Argentina/Cordoba');
 
 //--
 function __autoload($class_name) {
-    global $G_ClassesPath;
-    require_once "{$G_ClassesPath}/" . strtolower($class_name) . '.class.php';
+    global $global_ruta_src;
+    require_once "{$global_ruta_src}/" . strtolower($class_name) . '.class.php';
 }

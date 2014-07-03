@@ -533,7 +533,7 @@
                 <tr>
                     <td>
                         18. Detalle, en su opinión, los principales inconvenientes y/o costos del proceso de Rúbrica de documentación laboral en presentación papel (libro de hojas móviles)
-                        <textarea name="txtInconvenientes" id="txtInconvenientes"></textarea>
+                        <textarea name="txaInconvenientes" id="txtInconvenientes"></textarea>
                     </td>
                 </tr>
             </table>
