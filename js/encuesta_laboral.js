@@ -11,13 +11,16 @@ $(document).ready(function() {
         var val = $(this).val();
         if (val === "parcial") {
             $("#tblHorasMensuales").fadeIn();
+            $("#tblTiempoIncluidoEnOtraPregunta").fadeIn();
             $("#tblCantidadEmpleadosFulltime").fadeOut();
         } else if (val === "+1") {
             $("#tblCantidadEmpleadosFulltime").fadeIn();
             $("#tblHorasMensuales").fadeOut();
+            $("#tblTiempoIncluidoEnOtraPregunta").fadeOut();
         } else {
             $("#tblHorasMensuales").fadeOut();
             $("#tblCantidadEmpleadosFulltime").fadeOut();
+            $("#tblTiempoIncluidoEnOtraPregunta").fadeOut();
         }
     });
     $("input[name='optCantidadVecesViaja']").change(function() {

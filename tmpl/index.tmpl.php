@@ -251,7 +251,18 @@
                 <tr>
                     <td>
                         5.III ¿Se incluyó este tiempo en la pregunta 5.?
-                        <input type="text" value="" name="txtTiempoIncluidoEnOtraPregunta" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" value="si" name="optTiempoIncluidoEnOtraPregunta" />
+                        <label>Sí</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input  type="radio" value="no" name="optTiempoIncluidoEnOtraPregunta" />
+                        <label>No</label>
                     </td>
                 </tr>
             </table>
