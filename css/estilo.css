@@ -33,12 +33,17 @@ body{
     border:1px solid #000;
     padding:5px;
 }
-input[type=text], select, input[type=submit], input[type=button], a{
+input[type=text], select, input[type=submit], input[type=button], a, textarea{
     border-radius: 5px;
     border:1px solid black;
     padding:4px 8px;
     margin:2px 4px;
     box-shadow:inset 0px 1px 2px rgba(0,0,0,0.5);
+}
+textarea{
+    display:block;
+    width:90%;
+    height:100px;
 }
 input[type=submit], input[type=button], a{
     background-color:#FACC2E;
@@ -49,11 +54,4 @@ input[type=submit]:hover, input[type=button]:hover, a:hover{
 }
 input[type=checkbox]{
     margin:0px 4px;
-}
-//Cosas para el JS
-#tblCantidadIngresadaEmpresas{
-    display: none;
-}
-#tblHorasMensuales{
-    display: none;
 }

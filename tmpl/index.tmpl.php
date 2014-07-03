@@ -5,6 +5,7 @@
         </title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <link href="<?php echo $global_web_css; ?>/estilo.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $global_web_css; ?>/ocultar_campos.css" rel="stylesheet" type="text/css" />
         <script src="<?php echo $global_web_js; ?>/lib/jquery-1.9.1.min.js" type="text/javascript"></script>
         <script src="<?php echo $global_web_js; ?>/encuesta_laboral.js" type="text/javascript"></script>
     </head>
@@ -289,7 +290,7 @@
             <table class="pregunta" id="tblFrecuanciaCambioToner">
                 <tr>
                     <td>
-                        6.II ¿Cada cuánto reemplaza e tóner?
+                        6.II ¿Cada cuánto reemplaza el tóner?
                         <input type="text" value="" name="txtFrecuanciaCambioToner" />
                     </td>
                 </tr>
@@ -480,9 +481,7 @@
             <table class="pregunta" id="tblCantidadReimpresion" >
                 <tr>
                     <td>
-                        <p>13. ¿Cuántas veces se tuvo que reimprimir un libro por error de foliado o errores de forma previo a su presentación?</p>
-                    </td>
-                    <td>
+                        13. ¿Cuántas veces se tuvo que reimprimir un libro por error de foliado o errores de forma previo a su presentación?
                         <input type="text" value="" name="txtCantidadReimpresion" id="txtCantidadReimpresion" />
                     </td>
                 </tr>
@@ -490,9 +489,7 @@
             <table class="pregunta" id="tblCostoArchivado">
                 <tr>
                     <td>
-                        <p>14. Costo estimado del archivado por 10 años de los libros rubricados</p>
-                    </td>
-                    <td>
+                        14. Costo estimado del archivado por 10 años de los libros rubricados
                         <input type="text" value="" name="txtCostoArchivado" id="txtCostoArchivado" />
                     </td>
                 </tr>
@@ -500,9 +497,7 @@
             <table class="pregunta" >
                 <tr>
                     <td>
-                        <p>15. Costo estimado de riesgos laborales in-tinere, de robo, extravío y rotura de los libros rubricados en cada una de las presentaciones</p>
-                    </td>
-                    <td>
+                        15. Costo estimado de riesgos laborales in-tinere, de robo, extravío y rotura de los libros rubricados en cada una de las presentaciones
                         <input type="text" value="" name="txtCostoRiesgosLaborales" id="txtCostoRiesgosLaborales" />
                     </td>
                 </tr>
@@ -510,9 +505,7 @@
             <table class="pregunta" >
                 <tr>
                     <td>
-                        <p>16. Tiempo promedio de puesta a disposición para revisión de jueces, inspectores laborales y autoridades competentes de los libros rubricados</p>
-                    </td>
-                    <td>
+                        16. Tiempo promedio de puesta a disposición para revisión de jueces, inspectores laborales y autoridades competentes de los libros rubricados
                         <input type="text" value="" name="txtTiempoPromedioParaRevision" id="txtTiempoPromedioParaRevision" />
                     </td>
                 </tr>
@@ -520,9 +513,7 @@
             <table class="pregunta" >
                 <tr>
                     <td>
-                        <p>17. Costo estimado de riesgos de robo, extravío y rotura de los libros rubricados cuando se solicitan en las inspecciones</p>
-                    </td>
-                    <td>
+                        17. Costo estimado de riesgos de robo, extravío y rotura de los libros rubricados cuando se solicitan en las inspecciones
                         <input type="text" value="" name="txtCostoEstimadoRiesgos" id="txtCostoEstimadoRiesgos" />
                     </td>
                 </tr>
@@ -530,14 +521,12 @@
             <table class="pregunta" >
                 <tr>
                     <td>
-                        <p>18. Detalle, en su opinión, los principales inconvenientes y/o costos del proceso de Rúbrica de documentación laboral en presentación papel (libro de hojas móviles)</p>
-                    </td>
-                    <td>
+                        18. Detalle, en su opinión, los principales inconvenientes y/o costos del proceso de Rúbrica de documentación laboral en presentación papel (libro de hojas móviles)
                         <textarea name="txtInconvenientes" id="txtInconvenientes"></textarea>
                     </td>
                 </tr>
             </table>
-            <table class="pregunta" >
+            <table class="pregunta" id="tblTieneConexionInternet">
                 <tr>
                     <td>
                         <p>19. ¿Su empresa tiene conexión a Internet?</p>
@@ -545,12 +534,12 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="si" name="optCostoConexionInternet" id="optCostoConexionInternetSi" /><label>a) Sí</label>
+                        <input type="radio" value="si" name="optTieneConexionInternet" id="optTieneConexionInternetSi" /><label>a) Sí</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" value="no" name="optCostoConexionInternet" id="optCostoConexionInternetNo" /><label>b) No</label>
+                        <input type="radio" value="no" name="optTieneConexionInternet" id="optTieneConexionInternetNo" /><label>b) No</label>
                     </td>
                 </tr>
             </table>
